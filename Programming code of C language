@@ -1,0 +1,928 @@
+#include<stdio.h>
+int main(){
+    printf("Hello world");
+    return 0;
+}
+
+// WAP to check whether a person is eligible for voting or not
+#include<stdio.h>
+int main()
+{
+    int x, y;
+    printf("Enter your age:");
+    scanf("%d", &x);
+    if (x >= 18)
+      printf("You are eligible for voting.");
+    
+    else
+    
+        printf("You are not eligible for voting.");
+    
+      return 0;
+}  
+
+#include<stdio.h>
+int main()
+{
+    char ch;
+    printf("Enter character");
+    scanf("%c",&ch);
+    if(ch=='A' || ch=='a' || ch=='e' || ch=='E' || ch=='i' || ch=='I' || ch=='o' || ch=='O' || ch=='u' || ch=='U')
+    printf("It is vowel");
+    else 
+    printf("It is constant");
+    return 0;
+}
+
+// WAP to check whether the give is leap year or not.
+#include<stdio.h>
+int main()
+{
+    int year;
+    printf("Enter year : ");
+    scanf("%d",&year);
+    if(year%100 ==0)
+    {
+        if(year%400 == 0)
+        {
+            printf("%d is a leap year.",year);
+        }
+        else
+        {
+            printf("%d is not a leap year.",year);
+        }
+    }
+    else
+    {
+        if(year%4 ==0)
+        {
+            printf("%d is a leap year.",year);
+        }
+        else
+        {
+            printf("%d is not a leap year.",year);
+        }
+    }
+    return 0;
+    }
+
+// WAP check whether the given character is alphabet,digit or symbol
+#include<stdio.h>
+int main()
+{
+    printf("Enter Character");
+    char ch;
+    scanf("%c", &ch);
+    if((ch>=65 && ch<=90)|| (ch>=97 && ch<=122))
+       printf("It is alphabet");
+       else if (ch>=48 && ch<=57)
+       printf("It is digit");
+       else
+       printf("It is symbol");
+       return 0;
+    
+
+}
+
+// WAP to find the largest number among three
+#include<stdio.h>
+int main()
+{
+    int x, y, z;
+    printf("Enter the first number:" );
+    scanf("%d", &x);
+    printf("Enter the second number:" );
+    scanf("%d", &y);
+    printf("enter the third number:" );
+    scanf("%d", &z);
+    if (x > y && x > z)
+    printf("%d is the largest number", x);
+    else if (y > z)
+    printf("%d is the largest number", y);
+    else
+    printf("%d is the largest number", z);
+    return 0;
+
+}
+
+// WAP to take day number as an input and print the day name corresponding to that day number.
+#include<stdio.h>
+int main()
+{
+    int daynumber;
+    printf("Enter day number");
+    scanf("%d",&daynumber);
+    switch(daynumber)
+    {
+        case 1:
+        printf("Monday");
+        break;
+        case 2:
+        printf("Tuesday");
+        break;
+        case 3:
+        printf("Wednesday");
+        break;
+        case 4:
+        printf("Thursday");
+        break;
+        case 5:
+        printf("Friday");
+        break;
+        case 6:
+        printf("Saturday");
+        break;
+        case 7:
+        printf("Sunday");
+        break;
+        default:
+        printf("Invalid day number");
+    }
+    return 0;
+    }
+
+// end(code)
+//     The code has several issues;
+//     1.  The semicolon after the case statements is incorrect. It should be a colon
+//     2.  The switch statement is not properly closed. It should be closed with a closing
+//     3.  The code does not handle invalid inputs. If the user enters a number outside
+//     the range 1-7, the program will not behave as expected.
+//     4.  The code does not handle the case when the user enters a non-integer
+//     5.  The code does not handle the case when the user enters a negative number
+//     6.  The code does not handle the case when the user enters a number greater than
+//     7.  The code does not handle the case when the user enters a non-numeric
+//     7.  The code does not handle the case when the user enters a number that is 
+//     not a valid day of the week.
+//     Here is the corrected code:
+
+
+#include<stdio.h>
+int main()
+{
+    int choice;
+    printf("1. Area of Circle\n");
+    printf("2. Area of Rectangle\n");
+    printf("3. Area of Square\n");
+    printf("4. Area of Triangle\n");
+    printf("Enter choice :");
+    scanf("%d", &choice);
+    switch(choice)
+    {
+        case 1:
+        printf("Enter radius of circle :");
+        float r;
+        scanf("%f", &r);
+        printf("Area of circle = %.2f", 3.14*r*r);
+        break;
+        case 2:
+        printf("Enter radius of rectangle :");
+        float l,b;
+        scanf("%f %f", &l ,&b);
+        printf("Area of rectangle = %.2f", l*b);
+        break;
+        case 3:
+        printf("Enter side of square :");
+        float s;
+        scanf("%f", &s);
+        printf("Area of square = %.2f", s*s);
+        break;
+        case 4:
+        printf("Enter base and height of triangle :");
+        float b1,h;
+        scanf("%f %f", &b1, &h);  
+        break;
+        default:
+        printf("Invalid choice !!!!");
+    }
+      return 0;
+
+
+
+    }
+        
+   // WAP to check whether the given number is single digit, two digit, three digit, or more the 3 digits
+#include <stdio.h>
+int main()
+{
+    int num;
+    printf("Enter number =");
+    scanf("%d", &num);
+    if (num >= 0 && num < 10)
+    {
+        printf("Single digit number");
+    }
+    else if (num >= 10 && num < 100)
+    {
+        printf("Two digit number");
+    }
+    else if (num >= 100 && num < 1000)
+    {
+        printf("Three digit number");
+    }
+    else
+    {
+        printf("More than three digit number");
+    }
+    return 0;
+}
+
+// WAP to find the greatest number among three using switch statement
+#include<stdio.h>
+int main()
+{
+    int num1, num2, num3;
+    printf("Enter three number");
+    scanf("%d %d %d", &num1, &num2, &num3);
+    switch(num1 > num2 && num1 >num2)
+    {
+        case 1:
+        printf("%d is the greatest number", num1);
+        break;
+        case 0:
+        switch(num2>num3)
+        {
+            case 1:
+            printf("num2 is the greatest number", num2);
+            break;
+            case 0:
+            printf("num3 is the greatest number", num3);
+            break;
+        }
+        
+    }
+    return 0;
+}    
+
+//  WAP to print your name on screen 10 time
+ #include<stdio.h>
+ int main()
+ {
+     int i;
+     for(i=0;
+     i<10;
+     i++)     {
+      printf("Vardaan Sharma \n");
+     }
+    return 0;
+ }
+
+// WAP to print the number from 1 to N
+#include<stdio.h>
+int main()
+{
+   int i,n;
+   printf("Enter the vlaue of N : ");
+   scanf("%d",&n);
+   for(i=1;
+   i<n;
+   i++)
+   {
+    printf("%d", i);
+   }
+    return 0;
+}
+
+// // WAP to print all even number from 1 to N
+// #include<stdio.h>
+// int main()
+// {
+//     int i, n;
+//     printf("Enter value of N: ");
+//     scanf("%d", &n);
+//     for(i=1;
+//     i<n;
+//     i++)
+//     {
+//         if(i%2 ==0)
+//         printf("%d",i);
+//     }
+//     return 0;
+// }
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    int i, n, sum=0;
+    system("cls");
+    printf("Enter value of N: ");
+    scanf("%d", &n);
+    for(i=1;
+    i<=n;
+    i=i++)
+    {
+       sum = sum + i;
+    }
+     printf("Sum = %d",sum);
+    return 0;
+}
+
+ // WAp to print the given series 1 2 9 16 25.....N
+#include<stdio.h>
+#include<stdlib.h>
+int main() {
+     int i,n;
+     system("cls");
+     printf("Enter the value of N : ");
+    scanf("%d", &n);
+     for(i=1;
+    i<=n;
+    i++)
+    {
+         printf("%d", i*i);
+    }
+    return 0;
+
+    
+}
+
+// WAP to print all the alphabet from a to z
+#include<stdio.h>
+int main()
+{
+    int 
+}
+
+// WAP to print the table of given number
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    int n;
+    system("cls");
+    printf("Enter the value of n : ");
+    scanf("%d", &n);
+    for(int i=1;
+    i<=10;
+    i++)
+    {
+        printf("%d * %d = %d\n", n, i, n*1);
+    }
+    return 0;
+}
+
+// WAP to print the factorial of given number
+#include<stdio.h>
+int main()
+{
+    int n, fact=1;
+    printf("Enter number : ");
+    scanf("%d",&n);
+    for (int i=n;
+    i>=1;
+    i--)
+    {
+        fact = fact*1;
+    }
+    printf("Factorial of %d is %d", n, fact);
+    return 0;
+}
+
+// WAP to print the fabonacci series upto N terms
+#include<stdio.h>
+int main()
+{
+    int n,a=0, b=1, c;
+    printf("Enter number of terms : ");
+    scanf("%d", &n);
+    printf("%d %d",a,b);
+    for (int i=3;
+    i<=n;
+    i++)
+    {
+        c = a + b;
+        a = b;
+        b = c;
+        printf("%d",c);
+    }        
+    return 0;
+}
+
+#include<stdio.h>
+int main()
+{
+    int n, num, max=0;
+    printf("Enter the number of elements: ");
+    scanf("%d", &n);
+    for (int i=0;
+    i<=n;
+    i++)
+    { 
+    printf("Enter number : ");
+    scanf("%d", &num);
+    if (num > max)
+    max = num;
+    }
+    printf("Max = %d", max);
+    return 0;
+}
+
+// WAP to read a number from the user and perform the sum of their digits
+#include<stdio.h>
+int main()
+{
+    int n, sum=0;
+    printf("enter number : ");
+    scanf("%d",&n);
+    while(n !=0)
+{  sum = sum +n%10;
+    n = n/10;
+}     
+printf("Sum of  digits = %d", sum);
+return 0;
+}
+
+// WAP to read a number from the user and perform the sum of their digits
+// WAP to perform the sum of all even digits of a given number
+// WAP to perform the sum of first and last digit of a given number
+// WAP to swap 1st and last of a given number
+// WAP to count number of digits in a given number
+// WAp to reverse a given number
+// WAP to check the given number is pallindrome or not
+// WAP to check given number is armstrong or not
+
+// WAP to perform the sum of all even digits of a given number
+#include<stdio.h>
+int main()
+{
+    int n, sum=0;
+    printf("Enter the value of n : ");
+    scanf("%d", &n);
+    while(n !=0)
+    {
+        int rem = n%10;
+        if(rem%2==0)
+        sum = sum + n%10;
+        n = n/10;
+    }
+    printf("sum of all even digits = %d" , sum);
+    return 0;
+}
+
+// WAP to perform the sum of all first and last digit of a given number
+#include<stdio.h>
+int main()
+{
+    int n, sum = 0;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    int last = n%10;
+    int first;
+    while (n !=0)
+    {
+        int first = n/10;
+        n = n/10;
+    }
+    printf("sum of first and last digits = %d", last+first);
+    return 0;
+}
+
+//  WAP to swap 1st and last of a given number
+ #include<stdio.h>
+ #include<math.h>
+int main()
+ {
+     int num, cnt=0;
+     printf("Enter a number: ");
+    scanf("%d", &num);
+     int temp = num;
+     while(temp !=0)
+     {
+        temp = temp/10;
+        cnt++;
+     }
+     int firstdigit = num/pow(10, cnt-1);
+     num = num%(int)pow(10, cnt-1);
+     int lastdigit = num%1000;
+     num = num/10;
+     num = lastdigit*pow(10,cnt-1)+ num*10 + firstdigit;
+     printf("After swapping number is : %d", num);
+    return 0;
+ }
+// #include<math.h>
+// #include<stdio.h>
+// int main()
+// {
+//     int num, cnt;
+//     printf("Enter a number: ");
+//     scanf("%d", &num);
+//     cnt = (int)log10(num) + 1;
+//     printf("Number of digits in the number is %d\n", cnt);
+//     return 0;
+// }
+
+
+ #include<stdio.h>
+ #include<math.h>
+ int main()
+ {
+     int num, cnt=0;
+     printf("Enter a number:");
+     scanf("%d", &num);
+     while(num !=0)
+     {
+         num = num/10;
+         cnt++;
+     }
+     printf("Number of digits is: %d", cnt);
+     return 0;
+ }
+
+// WAP to reverse a given number
+#include<stdio.h>
+int main()
+{
+    int num, rev=0;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    while(num !=0)
+    {
+        int rem = num%10;
+        rev = rev*10 + rem;
+        num = num/10;
+    }
+    printf("Reverse of the number is: %d", rev);
+    return 0;
+}
+
+// WAP to check whether the number is pallindrome
+/*#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int num, rev = 0;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    int temp = num;
+    while(num !=0)
+    {
+        int rev = num%10;
+        rev = rev*10 + rem;
+        num = num/10;
+    }
+    if(rev == temp)
+    printf("It is pallindrome number");
+    else
+    printf("It is not a pallindrome number");
+    return 0;
+}*/
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int num, sum=0;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    int temp = num;
+    while(num !=0)
+    {
+        int rem= num%10;
+        int p=1;
+        for(int i=1;
+        i<=rem;
+        i++)
+        {
+            p = p*rem;
+        }
+        sum =sum + p;
+        num = num/10;
+        sum = sum + (int)pow(rem, digits);
+        num = num/10;
+    }
+    if(temp == sum)
+    printf("Number is Armstrong");
+    else
+    printf("Number is not Armstrong");
+    return 0;
+}
+
+// WAP to find the power of any x^y without the using power function
+#include<stdio.h>
+int main()
+{
+    int x, y, val=1 ;
+    printf("enter the value of x: ");
+    scanf("%d", &x);
+    printf("Enter the value of y: ");
+    scanf("%d", &y);
+    for( int i=0;
+    i<y;
+    i++)
+    {
+        val *=x;
+        
+    }
+      printf("exponent value %d\n",  val);
+             
+        return 0;
+}
+
+// WAP to check the given number is a prime number or not
+#include<stdio.h>
+int main()
+{
+    int n, i=2, cnt=0;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    while(i<=n/2)
+    {
+        if (n%i==0)
+        cnt++;
+        i++;
+    }
+    if(cnt==0)
+    printf("%d is a prime number", n);
+    else
+    printf("%d is not a prime number", n);
+    return 0;
+}
+
+// WAP to check the given number is prime or not
+#include<stdio.h>
+int main()
+{
+    int n;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    if (n <= 1)
+    {
+        printf("%d is not a prime number.", n);
+    }
+    else if (n <= 3)
+    {
+        printf("%d is a prime number.", n);
+    }
+    else if (n % 2 == 0 || n % 3 == 0)
+    {
+        printf("%d is not a prime number.", n);
+    }
+    else
+    {
+        for (int i = 5; i * i <= n; i += 6)
+        {
+            if (n % i == 0 || n % (i + 2))
+            {
+                printf("%d is not a prime number.", n);
+            }
+            else
+            {
+                printf("%d is a prime number.", n);
+            }
+        }
+    }
+    return 0;
+}
+
+// WAP to check the given number is prime or not
+#include<stdio.h>
+int main()
+{
+    int n, i=2, cnt=0;
+    printf("Enter the value of n: ");
+    scanf("%d", &n);
+    while(i<=n/2)
+    {
+        if (n%i == 0)
+        cnt++;
+        i++;
+    
+        if(cnt==0)
+        {
+            printf("%d is not a prime number", n);
+        }
+        else
+        {
+            printf("%d is a prime number", n);
+        }
+    }
+    return 0;
+}
+
+// WAP to perform the sum of all input numbers until user enter zero
+#include<stdio.h>
+int main()
+{
+    int num, sum=0;
+    do
+    {
+        printf("Enter a number: ");
+        scanf("%d", &num);
+        sum += num;
+    }
+    while(num !=0);
+    printf("Sum of all numbers is: %d", sum);
+    return 0;
+}
+
+// storage class example
+#include<stdio.h>   
+int main()
+{
+    auto int x;   
+    {
+        int y;
+    }
+    printf("The value of y = %d", y);
+    printf("The value of x = %d\n", x);
+    return 0;
+}
+
+// Storage class example
+#include<stdio.h>
+void show()
+{
+    register int x = 1;
+    static int y=1;
+    printf("x= %d and y= %d\n", x,y);
+    x++;
+    y++;
+}
+int main()
+{
+     show();
+     show();
+     show();
+    return 0;
+}
+
+// storage calss example
+#include<stdio.h>
+void show()
+{
+    register int x =1;
+    int y=10;
+    printf("Address of x = %x\n", x);
+}
+int main()
+{
+    
+    return 0;
+}
+
+// design the below pattern
+#include<stdio.h>
+int main()
+{
+    int n;
+    printf("Enter the number of rows: ");
+    scanf("%d", &n);
+    for(int i=0; i < n; i++)
+    {
+        for(int j=0; j <= 2* i; j++)
+        printf(" ");
+    {
+        for (int k = 0; k < n-i; k++)
+        {
+            printf("* ");
+        }
+     }
+
+        printf("\n");
+    }
+    return 0;
+}
+
+ // C program to print right half pyramid pattern of star
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    printf("Enter the number of rows: ");
+    scanf("%d", &n);
+    // first loop for printing rows
+    for (int i = 0; i < n; i++) 
+    {
+        // second loop for printing character in each rows
+        for (int j = 0; j <= 2*(n-i)-1; j++)
+         {
+            printf(" ");
+         }
+        {
+            for (int k = 0; k < 2*(i+1); k++)
+            {
+                printf("* ");
+            }
+            
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+#include<stdio.h>
+int main()
+{
+    int numbers[5];
+    printf("Enter 5 numbers:\n");
+    for(int i=0; i<5; i++)
+    {
+        printf("Enter numbers for index %d: ", i);
+        scanf("%d", &numbers[1]);
+    }
+    printf("\n The elements fo the array are\n");
+    for(int i=0; i<5; i++) 
+    {
+        printf("numbers[%d]= %d\n", i, numbers[i]);
+    }
+    return 0;
+}
+
+#include<stdio.h>
+int main()
+{
+    int n;
+    printf("Enter the value of n : ");
+    scanf("%d", &n);
+    for(int i=1; i<=10; i++)
+    {
+        printf("%d * %d = %d\n", n, i, n*1); 
+    }
+    return 0;
+}
+
+// How we can access the elements of an array
+#include<stdio.h>
+int main()
+{
+    int arr[5]={11,72,33,94,59};
+    arr[3]=100;
+    printf("%d", arr[3]);
+    for(int i=0; i<5; i++)
+    {
+        printf("%d", arr[i]);
+    }
+    return 0;
+}
+
+// WAP to display the elements of an array in reverse order
+#include<stdio.h>
+int main()
+{
+    int size;
+    printf("Enter Array size : ");
+    scanf("%d", &size);
+    int arg[size];
+    printf("Enter array elements : ");
+    for(int i=0; i<size; i++)
+    {
+        scanf("%d", &arg[i]);
+    }
+    printf("Array elements in reverse order : ");    
+    for(int i= size-1; i>=0; i--)
+    {
+    printf("%d", arg[i]);
+    }
+    return 0;
+}
+
+// WAP to find the sum of all the elements of an array
+#include<stdio.h>
+int main()
+{
+    int n, sum;
+    printf("Enter value of n : ");
+    scanf("%d", &n);
+    int arg[n];
+    printf("Enter array elements : ");
+    for(int i=0; i<n; i++)
+    printf("Sum of all the elements : ");
+    for(int i=)
+}
+
+
+
+   
+
+
+   
+
+
+
+
+
+    
+
+
+
+        
+    
+        
+        
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+
+
+    
+
+
+
