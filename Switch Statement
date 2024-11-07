@@ -1,0 +1,94 @@
+// WAP to take day number as an input and print the day name corresponding to that day number.
+#include<stdio.h>
+int main()
+{
+    int daynumber;
+    printf("Enter day number");
+    scanf("%d",&daynumber);
+    switch(daynumber)
+    {
+        case 1:
+        printf("Monday");
+        break;
+        case 2:
+        printf("Tuesday");
+        break;
+        case 3:
+        printf("Wednesday");
+        break;
+        case 4:
+        printf("Thursday");
+        break;
+        case 5:
+        printf("Friday");
+        break;
+        case 6:
+        printf("Saturday");
+        break;
+        case 7:
+        printf("Sunday");
+        break;
+        default:
+        printf("Invalid day number");
+    }
+    return 0;
+    }
+
+// end(code)
+//     The code has several issues;
+//     1.  The semicolon after the case statements is incorrect. It should be a colon
+//     2.  The switch statement is not properly closed. It should be closed with a closing
+//     3.  The code does not handle invalid inputs. If the user enters a number outside
+//     the range 1-7, the program will not behave as expected.
+//     4.  The code does not handle the case when the user enters a non-integer
+//     5.  The code does not handle the case when the user enters a negative number
+//     6.  The code does not handle the case when the user enters a number greater than
+//     7.  The code does not handle the case when the user enters a non-numeric
+//     7.  The code does not handle the case when the user enters a number that is 
+//     not a valid day of the week.
+//     Here is the corrected code:
+
+
+#include<stdio.h>
+int main()
+{
+    int choice;
+    printf("1. Area of Circle\n");
+    printf("2. Area of Rectangle\n");
+    printf("3. Area of Square\n");
+    printf("4. Area of Triangle\n");
+    printf("Enter choice :");
+    scanf("%d", &choice);
+    switch(choice)
+    {
+        case 1:
+        printf("Enter radius of circle :");
+        float r;
+        scanf("%f", &r);
+        printf("Area of circle = %.2f", 3.14*r*r);
+        break;
+        case 2:
+        printf("Enter radius of rectangle :");
+        float l,b;
+        scanf("%f %f", &l ,&b);
+        printf("Area of rectangle = %.2f", l*b);
+        break;
+        case 3:
+        printf("Enter side of square :");
+        float s;
+        scanf("%f", &s);
+        printf("Area of square = %.2f", s*s);
+        break;
+        case 4:
+        printf("Enter base and height of triangle :");
+        float b1,h;
+        scanf("%f %f", &b1, &h);  
+        break;
+        default:
+        printf("Invalid choice !!!!");
+    }
+      return 0;
+
+
+
+    }
