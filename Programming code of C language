@@ -919,6 +919,44 @@ int main()
      return 0;
 }
 
+// WAP to search a target value in an array
+#include<stdio.h>
+int main()
+{
+    int size, i; 
+    printf("Enter Array Size : ");
+    scanf("%d", &size);
+    int arg[size], target, flag=0;
+    printf("Enter Array element : ");
+    for( i=0; i<size; i++)
+    {
+        scanf("%d", &arg[i]);
+    }
+    printf("Enter Target value : ");
+    scanf("%d", &target);
+    // logic of binary search
+    int start=0, end=size-1, mid;
+    while(start<=end)
+    {
+        mid=(start+end)/2;
+  
+    if(target ==arg[mid])
+    {
+        flag=1;
+        break;
+    }
+      else if(target>arg[mid])
+      start=mid+1;
+      else
+      end = mid-1;
+    }
+    if(flag==1)
+    
+        printf("Target value found at index %d", mid);
+     else
+     printf("Element not found");
+     return 0;
+}
    
 
 
