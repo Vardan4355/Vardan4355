@@ -161,3 +161,85 @@ int main()
     return 0;
 }
 
+// WAP to read a number from the user and perform the sum of their digits
+#include<stdio.h>
+int main()
+{
+    int n, sum=0;
+    printf("enter number : ");
+    scanf("%d",&n);
+    while(n !=0)
+{  sum = sum +n%10;
+    n = n/10;
+}     
+printf("Sum of  digits = %d", sum);
+return 0;
+}
+
+// WAP to read a number from the user and perform the sum of their digits
+// WAP to perform the sum of all even digits of a given number
+// WAP to perform the sum of first and last digit of a given number
+// WAP to swap 1st and last of a given number
+// WAP to count number of digits in a given number
+// WAp to reverse a given number
+// WAP to check the given number is pallindrome or not
+// WAP to check given number is armstrong or not
+
+// WAP to perform the sum of all even digits of a given number
+#include<stdio.h>
+int main()
+{
+    int n, sum=0;
+    printf("Enter the value of n : ");
+    scanf("%d", &n);
+    while(n !=0)
+    {
+        int rem = n%10;
+        if(rem%2==0)
+        sum = sum + n%10;
+        n = n/10;
+    }
+    printf("sum of all even digits = %d" , sum);
+    return 0;
+}
+
+// WAP to perform the sum of all first and last digit of a given number
+#include<stdio.h>
+int main()
+{
+    int n, sum = 0;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    int last = n%10;
+    int first;
+    while (n !=0)
+    {
+        int first = n/10;
+        n = n/10;
+    }
+    printf("sum of first and last digits = %d", last+first);
+    return 0;
+}
+
+//  WAP to swap 1st and last of a given number
+ #include<stdio.h>
+ #include<math.h>
+int main()
+ {
+     int num, cnt=0;
+     printf("Enter a number: ");
+    scanf("%d", &num);
+     int temp = num;
+     while(temp !=0)
+     {
+        temp = temp/10;
+        cnt++;
+     }
+     int firstdigit = num/pow(10, cnt-1);
+     num = num%(int)pow(10, cnt-1);
+     int lastdigit = num%1000;
+     num = num/10;
+     num = lastdigit*pow(10,cnt-1)+ num*10 + firstdigit;
+     printf("After swapping number is : %d", num);
+    return 0;
+ }
