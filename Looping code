@@ -1,1 +1,163 @@
+//  WAP to print your name on screen 10 time
+ #include<stdio.h>
+ int main()
+ {
+     int i;
+     for(i=0;
+     i<10;
+     i++)     {
+      printf("Vardaan Sharma \n");
+     }
+    return 0;
+ }
+
+// WAP to print the number from 1 to N
+#include<stdio.h>
+int main()
+{
+   int i,n;
+   printf("Enter the vlaue of N : ");
+   scanf("%d",&n);
+   for(i=1;
+   i<n;
+   i++)
+   {
+    printf("%d", i);
+   }
+    return 0;
+}
+
+// // WAP to print all even number from 1 to N
+// #include<stdio.h>
+// int main()
+// {
+//     int i, n;
+//     printf("Enter value of N: ");
+//     scanf("%d", &n);
+//     for(i=1;
+//     i<n;
+//     i++)
+//     {
+//         if(i%2 ==0)
+//         printf("%d",i);
+//     }
+//     return 0;
+// }
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    int i, n, sum=0;
+    system("cls");
+    printf("Enter value of N: ");
+    scanf("%d", &n);
+    for(i=1;
+    i<=n;
+    i=i++)
+    {
+       sum = sum + i;
+    }
+     printf("Sum = %d",sum);
+    return 0;
+}
+
+ // WAp to print the given series 1 2 9 16 25.....N
+#include<stdio.h>
+#include<stdlib.h>
+int main() {
+     int i,n;
+     system("cls");
+     printf("Enter the value of N : ");
+    scanf("%d", &n);
+     for(i=1;
+    i<=n;
+    i++)
+    {
+         printf("%d", i*i);
+    }
+    return 0;
+
+    
+}
+
+// WAP to print all the alphabet from a to z
+#include<stdio.h>
+int main()
+{
+    int 
+}
+
+// WAP to print the table of given number
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    int n;
+    system("cls");
+    printf("Enter the value of n : ");
+    scanf("%d", &n);
+    for(int i=1;
+    i<=10;
+    i++)
+    {
+        printf("%d * %d = %d\n", n, i, n*1);
+    }
+    return 0;
+}
+
+// WAP to print the factorial of given number
+#include<stdio.h>
+int main()
+{
+    int n, fact=1;
+    printf("Enter number : ");
+    scanf("%d",&n);
+    for (int i=n;
+    i>=1;
+    i--)
+    {
+        fact = fact*1;
+    }
+    printf("Factorial of %d is %d", n, fact);
+    return 0;
+}
+
+// WAP to print the fabonacci series upto N terms
+#include<stdio.h>
+int main()
+{
+    int n,a=0, b=1, c;
+    printf("Enter number of terms : ");
+    scanf("%d", &n);
+    printf("%d %d",a,b);
+    for (int i=3;
+    i<=n;
+    i++)
+    {
+        c = a + b;
+        a = b;
+        b = c;
+        printf("%d",c);
+    }        
+    return 0;
+}
+
+#include<stdio.h>
+int main()
+{
+    int n, num, max=0;
+    printf("Enter the number of elements: ");
+    scanf("%d", &n);
+    for (int i=0;
+    i<=n;
+    i++)
+    { 
+    printf("Enter number : ");
+    scanf("%d", &num);
+    if (num > max)
+    max = num;
+    }
+    printf("Max = %d", max);
+    return 0;
+}
 
