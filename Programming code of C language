@@ -889,7 +889,35 @@ int main()
     for(int i=)
 }
 
-
+// WAP to search a target value in an array
+#include<stdio.h>
+int main()
+{
+    int size, i; 
+    printf("Enter Array Size : ");
+    scanf("%d", &size);
+    int arg[size], target, flag=0;
+    printf("Enter Array element : ");
+    for( i=0; i<size; i++)
+    {
+        scanf("%d", &arg[i]);
+    }
+    printf("Enter Target value : ");
+    scanf("%d", &target);
+    // logic of linear search or sequential search
+    for( i=0; i<size; i++)
+    if(target ==arg[i])
+    {
+        flag=1;
+        break;
+    }
+    if(flag==1)
+    
+        printf("Target value found at index %d", i);
+     else
+     printf("Element not found");
+     return 0;
+}
 
    
 
