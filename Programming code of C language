@@ -957,7 +957,40 @@ int main()
      printf("Element not found");
      return 0;
 }
-   
+
+#include<stdio.h>
+int main()
+{
+    int size, i; 
+    printf("Enter Array Size : ");
+    scanf("%d", &size);
+    int arg[size];
+    printf("Enter Array element : ");
+    for( i=0; i<size; i++)
+    {
+        scanf("%d", &arg[i]);
+    }
+
+// Insertion sort logic
+for(int i=0; i<size; i++)
+  {
+    int key = arg[i];
+    int j = i-1;
+    while(j>=0 && arg[j]>key)
+      {
+        arg[j+1] = arg[j];
+        j--;
+      }
+      if(i != (j+1))
+    arg[j+1] = key;
+  }
+  printf("After sorting array elements are : \n ");
+  for(i=0; i<size; i++)
+  {
+    printf("%d", arg[i]);
+  }
+return 0;
+}
 
 
    
