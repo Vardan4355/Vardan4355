@@ -992,7 +992,41 @@ for(int i=0; i<size; i++)
 return 0;
 }
 
-
+// WAP to count the frequency of each element in an array
+#include<stdio.h>
+int main()
+{
+    int size, i; 
+    printf("Enter Array Size : ");
+    scanf("%d", &size);
+    int arg[size];
+    printf("Enter Array element : ");
+    for( i=0; i<size; i++)
+    {
+        scanf("%d", &arg[i]);
+    }
+     for(i=0; i<size; i++)
+     {
+        int flag=0;
+        for(int k=0; k<i; k++)
+        {
+            if(arg[i]==arg[k])
+            {
+                flag=1;
+                break;
+            }
+        }
+        if(flag=0)
+        {
+        int frq=0;
+        for(int j=1; j<size; j++)
+            if(arg[i]==arg[j])
+            frq++;
+        }
+        printf("%d occurs %d times\n",arg[i],frq);
+     }
+     return 0;
+}
    
 
 
