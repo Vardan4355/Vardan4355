@@ -1069,7 +1069,33 @@ int main()
     return 0;
 }
 
-
+// WAP to read and display the elements of 2D array(Matrix).
+#include<stdio.h>
+int main()
+{
+    int rowSize,colSize;
+    printf("Enter row and column size :");
+    scanf("%d%d",&rowSize, &colSize);
+    int arg[rowSize][colSize];
+    printf("Enter the value of Array : ");
+    for(int i=0; i<rowSize; i++)
+    {
+    for(int j=0; j<colSize; j++)
+    {
+        scanf("%d", &arg[i][j]);
+    }
+    }
+    printf("2D Array Elements are : \n");
+    for(int i=0; i<rowSize; i++)
+    {
+    for(int j=0; j<colSize; j++)
+       {
+        printf("%d ",arg[i][j]);
+       }
+       printf("\n");
+    }
+    return 0;
+}
     
 
 
