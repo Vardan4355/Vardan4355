@@ -1097,7 +1097,36 @@ int main()
     return 0;
 }
     
-
+#include<stdio.h>
+int main()
+{
+    int rowSize,colSize;
+    printf("Enter row and column size :");
+    scanf("%d%d",&rowSize, &colSize);
+    int arg[rowSize][colSize];
+    printf("Enter the value of Array : ");
+    for(int i=0; i<rowSize; i++)
+    {
+        int sum=0;
+    for(int j=0; j<colSize; j++)
+    {
+        scanf("%d",arg[i][j]);
+       sum = sum +arg[i][j];
+    }
+    printf("Sum of %d row is %d\n",i,sum);
+    }
+    for(int i=0; i<colSize; i++)
+    {
+        int sum=0;
+    for(int j=0; j<rowSize; j++)
+       {
+        printf("%d",arg[j][i]);
+        sum = sum + arg[j][i];
+       }
+       printf("Sum of %d column is %d\n",i,sum);
+    }
+    return 0;
+}
 
 
         
