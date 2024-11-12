@@ -1128,7 +1128,36 @@ int main()
     return 0;
 }
 
-
+#include<stdio.h>
+int main()
+{
+    int rowSize,colSize;
+    printf("Enter row and column size :");
+    scanf("%d%d",&rowSize, &colSize);
+    int arg1[rowSize][colSize],arg2[rowSize][colSize],result[rowSize][colSize];
+    printf("Enter the value of Array : ");
+    for(int i=0; i<rowSize; i++)
+    {
+        for(int j=0;j<colSize;j++)
+    {
+    scanf("%d", &arg[rowSize][colSize]);
+    }
+}
+    // Addition logic
+    for(int i=0;i<rowSize;i++)
+    {
+        for(int j=0;j<colSize;j++)
+        sum +=arg[i][i];
+    }
+    printf("Sum of main diagonal is %d\n",sum);
+    int sum1=0;
+    for(int i=0; j=colSize-1; i<rowSize && j>=0; i++; j--)
+    {
+        sum1 +=arg[i][j];
+    }
+    printf("Sum of minor diagonal is %d\n",sum1);
+    return 0;
+}
         
     
         
