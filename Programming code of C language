@@ -1231,7 +1231,40 @@ int main()
     return 0;
 }
 
-        
+   // WAP to perform the multiplication  of two matrix
+#include<stdio.h>
+int main()
+{
+    int rowSize, colSize;
+    printf("Enter row and column size of matrix-1 : ");
+    scanf("%d", &rowSize, &colSize);
+    int matrix1[rowSize][colSize];
+    printf("Enter 1st elements :\n ");
+    scanf("%d", &matrix1);
+    for(int i=0; i<rowSize; i++)
+    {
+        for(int j=0; j<colSize; j++)
+        {
+            scanf("%d", matrix1[i][j]);
+        }
+    }
+    int rowSize1, colSize1;
+    printf("Enter row and column size of matrix-2 : ");
+    scanf("%d%d", &rowSize1, &colSize1);
+    int matrix2[rowSize1][colSize1];
+    printf("Enetr 2nd elements : \n");
+    scanf("%d", &matrix2);
+    for(int i=0; i<rowSize1; i++)
+    {
+        for(int j=0; j<colSize1; j++)
+        {
+            scanf("%d", &matrix2[i][j]);
+        }
+    }
+    
+    return 0;
+}
+     
         
     
 
