@@ -233,7 +233,7 @@ int main()
     int num1, num2, num3;
     printf("Enter three number");
     scanf("%d %d %d", &num1, &num2, &num3);
-    switch(num1 > num2 && num1 >num2)
+    switch(num1 > num2 && num1 >num3)
     {
         case 1:
         printf("%d is the greatest number", num1);
