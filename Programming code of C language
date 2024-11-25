@@ -1341,7 +1341,40 @@ int main()
     }
     return 0;
 }
-
+STRING FUNCTIONS:
+ #include<stdio.h>
+ #include<string.h>
+ int main()
+ {
+    // char str[50],str1[50];
+    // printf("Enter string : ");
+    // gets(str);
+    // int len= strlen(str);
+    // printf("length of the given string =%d",len);
+    // strlwr(str);
+    // printf("After conversion string is =%s",str);
+    // strupr(str);
+    // printf("Uppercase string  is : %s",str);
+    // strrev(str);
+    // printf("After reverse string is :%s",str);
+    // strcpy(str1,str);
+    // printf("After copy str1 = %s",str1);
+    char s1[50],s2[20];
+    printf("Enter sring1 : ");
+    gets(s1);
+    printf("Enter string2 : ");
+    gets(s2);
+    // strcat(s2,s1);
+    // printf("After concatenation string s2=%s",s2);
+    int x = strcmp(s1,s2);
+    if(x==0)
+    printf("Both are same");
+    else if(x ==-1)
+    printf("s1 is less than s2");
+    else
+    printf("s1 is greater than s2");
+    return 0;
+ }              
 
     
 
