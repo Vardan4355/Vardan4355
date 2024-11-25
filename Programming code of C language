@@ -1376,7 +1376,35 @@ STRING FUNCTIONS:
     return 0;
  }              
 
-    
+// WAP to find the total number of alphabets,digits or special character in a string
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char str[100];
+    int alpha = 0, digit = 0, symbol = 0 , len = strlen(str);
+    printf("Enter a string: ");
+    gets(str);
+    for(int i = 0; i<len; i++)
+    {
+        if(str[i]>=65 && str[i]<=90 || str[i])
+        {
+            alpha++;
+        }
+        else if(str[i]>=48 && str[i]<=57)
+        {
+            digit++;
+        }
+        else
+        {
+            symbol++;
+        }
+    }
+    printf("Total number of alphabets: %d\n",alpha);
+    printf("Total number of digits: %d\n",digit);
+    printf("Total number of special character: %d\n",symbol);
+    return 0;
+}    
 
 
 
