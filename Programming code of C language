@@ -1406,13 +1406,78 @@ int main()
     return 0;
 }    
 
+#include<stdio.h>
+void sayHello(void);
+int main()
+{
+    sayHello();
+    return 0;
+}
 
+void sayHello(void)
+{
+    printf("Hello !!!!");
+}
 
+    // WAP to find out the area of the circle with using function
+#include<stdio.h>
+void areaOfCircle(void);
+int main()
+{
+    areaOfCircle();
+    return 0;
+}
+// function with no argument and no return type
+void areaOfCircle(void)
+{
+    float radius;
+    printf("Enter radius : ");
+    scanf("%f",&radius);
+    float area = 3.14 * radius * radius;
+    printf("Area of Circle = %f",area);
+}
     
+// WAP to find the simple interest using the function
+#include<stdio.h>
+int findsimpleinterest(void);
+int main()
+{
+    int si = findsimpleinterest();
+    printf("Simple Insterest =%d",si);
+    return 0;
+}
+// funtion with no argument but wiht return type
+int findsimpleinterest(void)
+{
+     int p,r,t;
+     printf("Enter P,R ,T : ");
+     scanf("%d %d %d",&p,&r,&t);
+     return (p*r*t)/100;
+}
     
-
-    
-    
+  // function with agruments but  no return type
+#include<stdio.h>
+void convertToBinary(int);
+int main()
+{
+    int n;
+    printf("Enter Number : ");
+    scanf("%d",&n);
+    convertToBinary();
+    return 0;
+}
+void convertToBinary(int num)
+{
+    int place=1, binary =0;
+    while(num!=0)
+    {
+       int rem =num%2;
+       binary += (rem*place)+ rem;
+       num = num/2;
+       place = place*10;
+    }
+    printf("Binary is : %d", binary);
+}  
 
 
 
