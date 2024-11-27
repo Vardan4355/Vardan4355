@@ -1479,9 +1479,51 @@ void convertToBinary(int num)
     printf("Binary is : %d", binary);
 }  
 
+#include<stdio.h>
+void display(int ,int);
+int main()
+{
+    int x=10,y=20;
+    printf("x=%d\t y=%d\n",x,y);
+    display(x,y);
+    printf("x=%d\t y=%d\n",x,y);
+    return 0;
+}
+void display(int a, int b)
+{
+    a = 100;
+    b = 200;
+    printf("a=%d\t b=%d\n",a,b);
+}
 
+// WAP to find the cube of any number by using function
+#include<stdio.h>
+void cube(void);
+void cubeNumber(int a);
+void cubeNumber1(int a);
 
-
+{
+void cubeNumber(int a)
+ int main()
+ {
+    int a;
+    printf("Enter the value of a : ");
+    scanf("%d",&a);
+    printf("cube : %d",a*a*a);
+ }
+ void cubeNumber1(int a)
+{
+    int cube = a;
+    printf("Cube = %d",cube);
+}
+int main()
+{
+    int a;
+    printf("Enter the value of a : ");
+    scanf("%d",&a);
+    return 0;
+}
+}
 
     
 
